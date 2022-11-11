@@ -9,7 +9,7 @@ class StringUtilsTest {
 	@Test
 	void testToSnakeCase1() {
 		String result = StringUtils.toSnakeCase("aaa");
-		assertEquals("aaa", result, "toSnakeCase1(aaa)失敗");
+		assertEquals("aaa", result, "toSnakeCase1(\"aaa\")失敗");
 	}
 
 	@Test
@@ -21,7 +21,7 @@ class StringUtilsTest {
 	@Test
 	void testToSnakeCase3() {
 		String result = StringUtils.toSnakeCase("practiceJunit");
-		assertEquals("practice_junit", result, "toSnakeCase2(practiceJunit)失敗");
+		assertEquals("practice_junit", result, "toSnakeCase3(practiceJunit)失敗");
 	}
 
 }
