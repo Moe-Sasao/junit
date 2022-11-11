@@ -33,7 +33,7 @@ class CalculatorTest {
 			calc.divide(2, 0);
 			fail("例外発生");
 		} catch (IllegalArgumentException e) {
-			assertEquals("divide by zero.", e.getMessage(), "例外発生");
+			assertEquals("divide by zero.", e.getMessage(), "test error");
 		}
 
 	}

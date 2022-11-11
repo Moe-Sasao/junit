@@ -31,7 +31,7 @@ class ItemStockTest {
 	void test1() {
 		Item book = new Item("book", 1000);
 		int result = itemStock.getNum(book);
-		assertEquals(0, result, "test error");
+		assertEquals(0, result, "test1 error");
 	}
 
 	@Test
@@ -39,7 +39,7 @@ class ItemStockTest {
 		Item book = new Item("book", 1000);
 		itemStock.add(book);
 		int result = itemStock.getNum(book);
-		assertEquals(1, result, "test1 error");
+		assertEquals(1, result, "test2 error");
 	}
 
 //	@Test
@@ -47,7 +47,7 @@ class ItemStockTest {
 //		Item book = new Item("book", 1000);
 //		itemStock.add(book);
 //		int result = itemStock.getNum(book);
-//		assertEquals(1, result, "test2 error");
+//		assertEquals(1, result, "test3 error");
 //	}
 
 	@Test
@@ -56,7 +56,7 @@ class ItemStockTest {
 		itemStock.add(book);
 		itemStock.add(book);
 		int result = itemStock.getNum(book);
-		assertEquals(2, result, "test3 error");
+		assertEquals(2, result, "test4 error");
 	}
 
 	@Test
@@ -66,7 +66,7 @@ class ItemStockTest {
 		Item CD = new Item("CD", 1500);
 		itemStock.add(CD);
 		int result = itemStock.getNum(CD);
-		assertEquals(1, result, "test4 error");
+		assertEquals(1, result, "test5 error");
 	}
 
 }
