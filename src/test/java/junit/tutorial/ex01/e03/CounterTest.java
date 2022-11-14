@@ -36,21 +36,22 @@ class CounterTest {
 	@Test
 	void test2() {
 		Counter counter = new Counter();
+		int result=0;
 		for (int i = 0; i >= 2; i++) {
-			counter.increment();
-			int result = counter.increment();
-			assertEquals(2, result, "test2 error");
+			result = counter.increment();
 		}
+		assertEquals(2, result, "test2 error");
+		
 	}
 	
 	@Test
 	void test3() {
 		Counter counter = new Counter();
+		int result=0;
 		for (int i = 0; i >= 50; i++) {
-			counter.increment();
-			int result = counter.increment();
-			assertEquals(51, result, "test3 error");
+			result = counter.increment();
 		}
+		assertEquals(51, result, "test3 error");
 	}
 
 }
