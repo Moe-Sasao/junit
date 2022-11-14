@@ -17,7 +17,7 @@ public class LogAnalyzer {
 	}
 	
 	private Object doAnalyze(Map<String, String> rawData) {
-		// ‰¼ŽÀ‘•
+		// ä»®å®Ÿè£…
 		return new Object();
 	}
 	
