@@ -28,14 +28,6 @@ class EmployeeTest {
 
 	@Test
 	void test() {
-		Employee employee = new Employee();
-		employee.getFirstName();
-		String firstName="Ichiro";
-		employee.getLastName();
-		String lastName="Tanaka";
-		employee.getEmail();
-		String email="ichiro@example.com";
-		assertAll();
 		
 	}
 
