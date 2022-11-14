@@ -9,6 +9,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 class MonthlyCalendarTest {
 
@@ -28,18 +30,11 @@ class MonthlyCalendarTest {
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	void test() {
-		String obj1 = "2012/1/31";
-		String obj2 = "2012/1/30";
-		String obj3 = "2012/2/1";
-		if (LocalDate.now().equals(obj1)) {
-			assertEquals(0, "error");
-		} else if (LocalDate.now().equals(obj2)) {
-			assertEquals(1, "error");
-		} else if (LocalDate.now().equals(obj3)) {
-			assertEquals(28, "error");
-		}
+	@ParameterizedTest
+	@CsvSource({ "2012-01-31,0", "2012-01-30,1", "2012-02-01,28" })
+	void test(LocalDate date, int answer) {
+		MonthlyCalendar calendar = new MonthlyCalendar(date);
+		assertEquals(answer, calendar.getRemainingDays());
 
 	}
 
